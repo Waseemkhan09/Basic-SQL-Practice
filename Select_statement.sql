@@ -1,10 +1,10 @@
-# creating database
+-- creating database
 create database employee_details
 
-# using craeted database
+-- using craeted database
 use employee_details
 
-# command to create table in database
+-- command to create table in database
 CREATE TABLE Employees (
     EmployeeID INT PRIMARY KEY,
     FirstName VARCHAR(50),
@@ -14,7 +14,7 @@ CREATE TABLE Employees (
     HireDate DATE
 );
 
-# Inserting values in tables
+-- Inserting values in tables
 INSERT INTO Employees (EmployeeID, FirstName, LastName, Department, Salary, HireDate)
 VALUES
 (1, 'John', 'Doe', 'HR', 50000.00, '2020-01-15'),
@@ -23,14 +23,14 @@ VALUES
 (4, 'Bob', 'Brown', 'Marketing', 55000.00, '2018-09-30'),
 (5, 'Charlie', 'Davis', 'IT', 70000.00, '2022-02-20');
 
-# Executing select command in SQL
+-- Executing select command in SQL
 
 select * from Employees
 select Firstname,Lastname from Employees
 select Salary from Employees
-# combine firstname and lastname using concat function
+-- combine firstname and lastname using concat function
 select EmployeeID,concat(Firstname,' ',Lastname) from Employees
-# In below command specified new combined column name
+-- In below command specified new combined column name
 select EmployeeID,concat(Firstname,' ',Lastname) [Full name] from Employees
-# Another command for same
+-- Another command for same
 select EmployeeID,concat(Firstname,' ',Lastname) as [Full name] from Employees
